@@ -110,15 +110,13 @@ a:focus-visible {
 }
 
 .brand img {
-  height: 32px;
+  height: 28px;
   width: auto;
   display: block;
 }
 
-.brand-text {
-  font-size: 19px;
-  font-weight: 600;
-  letter-spacing: -0.04em;
+@media (min-width: 734px) {
+  .brand img { height: 32px; }
 }
 
 .site-nav {
@@ -244,6 +242,11 @@ main {
   font-weight: 400;
 }
 
+/* Cards sit inside .hero but must be left-aligned — centering breaks list bullets */
+.hero .app-grid {
+  text-align: left;
+}
+
 /* ——— Sections ——— */
 .section {
   margin-top: 56px;
@@ -363,26 +366,44 @@ main {
 }
 
 .app-card ul {
-  margin: 0 0 24px;
-  padding-left: 1.2em;
+  margin: 0 0 22px;
+  padding: 0;
+  list-style: none;
   color: var(--text-secondary);
-  font-size: 15px;
-  line-height: 1.55;
+  font-size: 16px;
+  line-height: 1.5;
 }
 
-.app-card ul li { margin: 0.35em 0; }
+.app-card ul li {
+  position: relative;
+  padding-left: 1.15em;
+  margin: 0.45em 0;
+}
+
+.app-card ul li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.55em;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: var(--text-tertiary);
+}
 
 /* ——— Buttons ——— */
 .actions {
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: 10px;
+  margin-top: 4px;
 }
 
 @media (min-width: 480px) {
   .actions {
     flex-direction: row;
     flex-wrap: wrap;
+    align-items: stretch;
   }
 }
 
@@ -422,16 +443,25 @@ main {
 
 .btn[disabled],
 .btn[aria-disabled="true"] {
-  opacity: 0.4;
-  cursor: not-allowed;
   pointer-events: none;
 }
 
+/* Intentional “coming soon” — reads as disabled on purpose, not broken */
+.btn--ghost[aria-disabled="true"] {
+  opacity: 1;
+  cursor: not-allowed;
+  color: var(--text-tertiary);
+  border-style: dashed;
+  border-color: rgba(255, 255, 255, 0.22);
+  background: rgba(255, 255, 255, 0.03);
+}
+
 .btn-note {
-  margin: 10px 0 0;
+  margin: 14px 0 0;
+  min-height: 2.75em;
   font-size: 13px;
   color: var(--text-tertiary);
-  line-height: 1.4;
+  line-height: 1.45;
   width: 100%;
 }
 
