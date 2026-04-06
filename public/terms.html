@@ -3,35 +3,59 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-  <meta name="theme-color" content="#030303" />
+  <meta name="theme-color" content="#000000" />
   <meta name="color-scheme" content="dark" />
   <title>Terms of Service — Nisu</title>
   <meta name="description" content="Terms governing use of the Nisu rider and driver apps. Nisu is a technology platform connecting riders and drivers." />
-  <link rel="icon" href="assets/favicon.png" type="image/png" />
+  <link rel="icon" href="assets/app-icon.jpg" type="image/jpeg" />
+  <link rel="apple-touch-icon" href="assets/app-icon.jpg" />
   <link rel="stylesheet" href="styles.css" />
 </head>
-<body class="legal-page">
-  <a class="skip-link" href="#main">Skip to content</a>
+<body class="legal-page" data-page-title="terms.pageTitle" data-description-key="terms.metaDescription">
+  <a class="skip-link" href="#main" data-i18n="skip">Skip to content</a>
 
   <header class="site-header">
-    <a href="index.html" class="brand" aria-label="Nisu home">
-      <img src="assets/nisu-logo-white.png" alt="Nisu" width="120" height="32" />
-    </a>
-    <nav class="site-nav" aria-label="Site">
-      <a href="index.html">Home</a>
-      <a href="faq.html">FAQ</a>
-      <a href="privacy.html">Privacy</a>
-      <a href="terms.html" aria-current="page">Terms</a>
-    </nav>
-    <div class="header-actions">
-      <a class="header-cta" href="mailto:contact@nisu.info?subject=Nisu">Contact</a>
+    <div class="site-header__inner">
+      <a href="index.html" class="brand" aria-label="Nisu">
+        <span class="brand-wordmark">Nisu</span>
+      </a>
+      <nav class="site-nav site-nav--desktop" aria-label="Primary">
+        <a href="index.html" data-i18n="nav.home">Home</a>
+        <a href="faq.html" data-i18n="nav.faq">FAQ</a>
+        <a href="privacy.html" data-i18n="nav.privacy">Privacy</a>
+        <a href="terms.html" aria-current="page" data-i18n="nav.terms">Terms</a>
+      </nav>
+      <div class="site-header__tools">
+        <div class="lang-switch" role="group" data-i18n-aria="lang.label" aria-label="Language">
+          <button type="button" class="lang-btn lang-btn--active" data-set-lang="en" aria-pressed="true">EN</button>
+          <button type="button" class="lang-btn" data-set-lang="sq" aria-pressed="false">SQ</button>
+        </div>
+        <a class="header-cta hide-mobile-up" href="mailto:contact@nisu.info?subject=Nisu" data-i18n="nav.contact">Contact</a>
+        <button type="button" class="menu-toggle" aria-expanded="false" aria-controls="site-drawer" data-i18n-aria="nav.menu">
+          <span class="menu-toggle-lines" aria-hidden="true"></span>
+          <span class="visually-hidden" data-i18n="nav.menu">Menu</span>
+        </button>
+      </div>
+    </div>
+
+    <div id="site-drawer" class="site-drawer" hidden>
+      <button type="button" class="site-drawer__backdrop" tabindex="-1" data-i18n-aria="nav.closeMenu" aria-label="Close menu"></button>
+      <div class="site-drawer__panel" tabindex="-1" role="dialog" aria-modal="true" aria-label="Menu">
+        <nav class="site-drawer__nav" aria-label="Mobile">
+          <a href="index.html" data-i18n="nav.home">Home</a>
+          <a href="faq.html" data-i18n="nav.faq">FAQ</a>
+          <a href="privacy.html" data-i18n="nav.privacy">Privacy</a>
+          <a href="terms.html" aria-current="page" data-i18n="nav.terms">Terms</a>
+        </nav>
+        <a class="header-cta header-cta--mobile" href="mailto:contact@nisu.info?subject=Nisu" data-i18n="nav.contact">Contact</a>
+      </div>
     </div>
   </header>
 
   <main id="main">
-    <a class="back-to-home" href="index.html">← Back to home</a>
+    <a class="back-to-home" href="index.html" data-i18n="terms.back">← Back to home</a>
 
-    <article class="legal-doc">
+    <article class="legal-doc legal-lang" data-lang="en">
       <h1>Terms of Service</h1>
       <p class="last-updated">Last updated: February 2025</p>
 
@@ -118,21 +142,113 @@
       <h2>13. Contact</h2>
       <p>For questions about these Terms, contact us at: <strong><a class="link-inline" href="mailto:contact@nisu.info">contact@nisu.info</a></strong></p>
     </article>
+
+    <article class="legal-doc legal-lang" data-lang="sq" hidden>
+      <h1>Kushtet e shërbimit</h1>
+      <p class="last-updated">Përditësuar: shkurt 2025</p>
+
+      <p>Mirë se vini te <strong>Nisu</strong>. Këto Kushte të Shërbimit (&quot;Kushtet&quot;) rregullojnë përdorimin tuaj të aplikacionit(ve) celular Nisu, përfshirë aplikacionin për udhëtarë dhe për vozitës (së bashku &quot;Aplikacioni&quot; ose &quot;Shërbimet&quot;). Duke përdorur Aplikacionin, ju pranoni këto Kushte. Shërbimet kryesisht ofrohen në Kosovë dhe mund të jenë edhe në Shqipëri, Greqi, Maqedoninë e Veriut dhe vende të tjera.</p>
+
+      <div class="important">
+        <strong>E RËNDËSISHME:</strong> Nisu është platformë teknologjie dhe shërbim softueri që lidh udhëtarët me vozitësit. Ne nuk punësojmë vozitës, nuk zotërojmë automjete dhe nuk ofrojmë shërbim transporti. Nuk jemi kompani taksie, transportues ose punëdhënës. Të gjitha udhëtimet janë marrëveshje vetëm midis udhëtarëve dhe vozitësve. Nisu nuk përgjigjet për sjelljen e përdoruesve, gjendjen e automjeteve ose çdo incident para, gjatë ose pas një udhëtimi.
+      </div>
+
+      <h2>1. Përshkrimi i Shërbimeve</h2>
+      <p>Nisu ofron një platformë softuerike që u mundëson përdoruesve:</p>
+      <ul>
+        <li><strong>Udhëtarëve:</strong> Të kërkojnë dhe rezervojnë udhëtime, të shohin informacionin e vozitësit, të ndjekin udhëtimin dhe të paguajnë.</li>
+        <li><strong>Vozitësve:</strong> Të marrin kërkesa, të navigojnë te marrjet dhe destinacionet dhe të marrin pagesë për udhëtimet.</li>
+      </ul>
+      <p>Aplikacioni lehtëson lidhjet midis udhëtarëve dhe vozitësve. Nisu nuk ofron transport. Vozitësit janë palë të treta të pavarura, jo punonjës agjentë i Nisu. Udhëtarët hyjnë në automjet dhe ndërveprojnë me vozitësit në rrezikun e tyre.</p>
+
+      <h2>2. Përshtatshmëria</h2>
+      <p>Duhet të jeni së paku 18 vjeç dhe të keni kapacitet ligjor për marrëveshje të detyrueshme. Duke përdorur Aplikacionin, përfaqësoni se i plotësoni këto kërkesa.</p>
+
+      <h2>3. Llogaritë</h2>
+      <p>Duhet të krijoni llogari për disa veçori. Jeni përgjegjës për fshehtësinë e kredencialeve dhe për gjithë aktivitetin nën llogarinë tuaj. Pranoni të jepni informacion të saktë dhe të plotë.</p>
+
+      <h2>4. Mohime dhe kufizim përgjegjësie</h2>
+
+      <h3>4.1 Pa garanci</h3>
+      <p>APLIKACIONI DHE SHËRBIMET OFROHEN &quot;SIÇ JANË&quot; DHE &quot;SIÇ DISPONOHEN&quot; PA GARANCI TË ÇDO LLOJI, TË SHPREHURA OSE TË NËNKUPTUARA. NISU MOHON GARANCITË, PËRFSHIRË TREGTUESHMËRINË, PËRSHTATJEN PËR QËLLIM TË CAKTUAR DHE MOS SHKELJEN.</p>
+
+      <h3>4.2 Vetëm platformë</h3>
+      <p>Nisu është ndërmjetës teknologjie. Ne nuk:</p>
+      <ul>
+        <li>Punësojmë, mbikëqyrim ose kontrollojmë vozitësit.</li>
+        <li>Zotërojmë, operojmë ose mirëmbajmë automjete.</li>
+        <li>Garojmë sigurinë, gjendjen ose ligjshmërinë e automjetit ose vozitësit.</li>
+        <li>Marrim përgjegjësi për sjelljen e udhëtarëve ose vozitësve.</li>
+        <li>Marrim përgjegjësi për humbje, lëndim, dëm ose incident nga ose i lidhur me një udhëtim.</li>
+      </ul>
+
+      <h3>4.3 Përgjegjësia e përdoruesit</h3>
+      <p>Udhëtarët dhe vozitësit përdorin Aplikacionin në rrezikun e tyre. Jeni vetëm përgjegjës për:</p>
+      <ul>
+        <li>Vendimin të pranoni ose ofroni një udhëtim.</li>
+        <li>Verifikimin e identitetit dhe përshtatshmërisë së palës tjetër.</li>
+        <li>Sigurinë tuaj dhe të të tjerëve gjatë udhëtimit.</li>
+        <li>Zbatimin e ligjeve të zbatueshme, përfshirë rregulloret e trafikut dhe transportit.</li>
+      </ul>
+
+      <h3>4.4 Kufizimi i përgjegjësisë</h3>
+      <p>NË MASËN MAKSIMALE TË LEJUAR NGA LIGJI, NISU, FILIALET, ZYRTARËT, DREJTORËT, PUNONJËSIT DHE AGJENTËT NUK DO TË JENË PËRGJEGJËS PËR DËME TË TJERA, TË RASTËSME, TË VEÇANTA, PASUEDIKE OSE NDËSHKUESE, OSE HUMBJE FITIMESH, TË DHËNASH OSE PRESTIGJI, QË LIDHEN ME PËRDORIMIN TUAJ TË APLIKACIONIT OSE UDHËTIMIT, EDHE NËSE JENI NJOFTUAR PËR MUNDËSINË E TILLË.</p>
+      <p>NË ASNJË RAST PËRGJEGJËSIA E PLOTË E NISU NUK DO TË KALOJË SHUMËN QË KENI PAGUAR NISU (NSE KA) NË DHËMBËDHETË (12) MUAJT PARA PADISË, OSE NJËQIND EURO (€100), ÇDO NGA TË DYJAT ËSHTË MË E MADHE.</p>
+
+      <h2>5. Dëmshpërblimi</h2>
+      <p>Pranoni të dëmshpërbeni, mbrojtni dhe të mos dëmtoni Nisu, filialet dhe zyrtarët, drejtorët, punonjësit dhe agjentët përjet nga çdo pretendim, dëm, humbje, përgjegjësi, kosto dhe shpenzim (përfshirë honorarnet ligjore të arsyeshme) që rrjedhin nga: (a) përdorimi juaj i Aplikacionit; (b) shkelje e këtyre Kushteve; (c) shkelje e ligjit ose e të drejtave të palës së tretë; ose (d) çdo udhëtim, incident ose mosmarrëveshje midis jush dhe një përdoruesi tjetër.</p>
+
+      <h2>6. Sjellje e ndaluar</h2>
+      <p>Nuk pranoni të:</p>
+      <ul>
+        <li>Përdorni Aplikacionin për qëllim të paligjshëm ose në shkelje të ligjit.</li>
+        <li>Ngjacni, keqpërdorni ose lëndoni përdorues të tjerë.</li>
+        <li>Imitoni ndonjë person ose entitet.</li>
+        <li>Ndërhyni ose shqëndroni Aplikacionin ose infrastrukturën e tij.</li>
+        <li>Provohet akses pa leje në Aplikacion ose sistem.</li>
+        <li>Përdorni Aplikacionin për aktivitet mashtrues ose të paligjshëm.</li>
+      </ul>
+
+      <h2>7. Pagesat dhe tarifat</h2>
+      <p>Udhëtarët paguajnë përmes Aplikacionit. Vozitësit marrin pagesën sipas platformës. Nisu mund të aplikojë tarifa shërbimi. Tarifat mund të ndryshojnë. Jeni përgjegjës për çdo tatim të zbatueshëm.</p>
+
+      <h2>8. Pronësia intelektuale</h2>
+      <p>Aplikacioni, përfshirë dizajnin, veçoritë dhe përmbajtjen, është pronë e Nisu dhe i mbrohet me ligje pronësore intelektuale. Nuk mund të kopjoni, ndryshoni ose të krijoni vepra të derivuara pa leje me shkrim.</p>
+
+      <h2>9. Përfundimi</h2>
+      <p>Mund ta pezullojmë ose përfundojmë aksesin tuaj në çdo kohë, me ose pa shkak ose njoftim. Mund të ndaloni përdorimin në çdo kohë. Me përfundimin, e drejta juaj e përdorimit pushon menjëherë.</p>
+
+      <h2>10. Ligji përkatës dhe mosmarrëveshjet</h2>
+      <p>Këto Kushte rregullohen nga ligjet e Kosovës, pa marrë parasysh konfliktin e ligjeve. Mosmarrëveshjet zgjidhen në gjykatat e Kosovës, në masën e lejuar nga ligji. Për përdorues në juridiksione të tjera mund të zbatohen ligje vendase të detyrueshme.</p>
+
+      <h2>11. Ndryshime</h2>
+      <p>Mund t&apos;i modifikojmë Kushtet në çdo kohë. Do t&apos;ju njoftojmë për ndryshime të rëndësishme duke postuar Kushte të reja në Aplikacion ose me mjete të tjera të arsyeshme. Vazhdimi i përdorimit pas ndryshimeve nënkupton pranim.</p>
+
+      <h2>12. Ndarja</h2>
+      <p>Nëse ndonjë dispozitë konsiderohet e pavlefshme, dispozitat e tjera mbeten në fuqi.</p>
+
+      <h2>13. Kontakti</h2>
+      <p>Pyetje mbi këto Kushte: <strong><a class="link-inline" href="mailto:contact@nisu.info">contact@nisu.info</a></strong></p>
+    </article>
   </main>
 
   <footer class="site-footer">
     <div class="footer-links">
-      <a href="index.html">Home</a>
-      <a href="faq.html">FAQ</a>
-      <a href="privacy.html">Privacy Policy</a>
-      <a href="mailto:contact@nisu.info">Contact</a>
+      <a href="index.html" data-i18n="nav.home">Home</a>
+      <a href="faq.html" data-i18n="footer.faq">FAQ</a>
+      <a href="privacy.html" data-i18n="footer.privacy">Privacy Policy</a>
+      <a href="mailto:contact@nisu.info" data-i18n="footer.contact">Contact</a>
     </div>
     © <span id="year"></span> Nisu
     <span class="meta">nisu.info</span>
   </footer>
 
-  <script>
+  <script src="i18n.js" defer></script>
+  <script defer>
     document.getElementById('year').textContent = new Date().getFullYear();
+    document.addEventListener('DOMContentLoaded', function () {
+      window.NisuI18n.bootstrap();
+    });
   </script>
 </body>
 </html>

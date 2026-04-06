@@ -3,35 +3,59 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-  <meta name="theme-color" content="#030303" />
+  <meta name="theme-color" content="#000000" />
   <meta name="color-scheme" content="dark" />
   <title>Privacy Policy — Nisu</title>
   <meta name="description" content="How Nisu collects, uses, and protects your information when you use our rider and driver apps." />
-  <link rel="icon" href="assets/favicon.png" type="image/png" />
+  <link rel="icon" href="assets/app-icon.jpg" type="image/jpeg" />
+  <link rel="apple-touch-icon" href="assets/app-icon.jpg" />
   <link rel="stylesheet" href="styles.css" />
 </head>
-<body class="legal-page">
-  <a class="skip-link" href="#main">Skip to content</a>
+<body class="legal-page" data-page-title="privacy.pageTitle" data-description-key="privacy.metaDescription">
+  <a class="skip-link" href="#main" data-i18n="skip">Skip to content</a>
 
   <header class="site-header">
-    <a href="index.html" class="brand" aria-label="Nisu home">
-      <img src="assets/nisu-logo-white.png" alt="Nisu" width="120" height="32" />
-    </a>
-    <nav class="site-nav" aria-label="Site">
-      <a href="index.html">Home</a>
-      <a href="faq.html">FAQ</a>
-      <a href="privacy.html" aria-current="page">Privacy</a>
-      <a href="terms.html">Terms</a>
-    </nav>
-    <div class="header-actions">
-      <a class="header-cta" href="mailto:contact@nisu.info?subject=Nisu">Contact</a>
+    <div class="site-header__inner">
+      <a href="index.html" class="brand" aria-label="Nisu">
+        <span class="brand-wordmark">Nisu</span>
+      </a>
+      <nav class="site-nav site-nav--desktop" aria-label="Primary">
+        <a href="index.html" data-i18n="nav.home">Home</a>
+        <a href="faq.html" data-i18n="nav.faq">FAQ</a>
+        <a href="privacy.html" aria-current="page" data-i18n="nav.privacy">Privacy</a>
+        <a href="terms.html" data-i18n="nav.terms">Terms</a>
+      </nav>
+      <div class="site-header__tools">
+        <div class="lang-switch" role="group" data-i18n-aria="lang.label" aria-label="Language">
+          <button type="button" class="lang-btn lang-btn--active" data-set-lang="en" aria-pressed="true">EN</button>
+          <button type="button" class="lang-btn" data-set-lang="sq" aria-pressed="false">SQ</button>
+        </div>
+        <a class="header-cta hide-mobile-up" href="mailto:contact@nisu.info?subject=Nisu" data-i18n="nav.contact">Contact</a>
+        <button type="button" class="menu-toggle" aria-expanded="false" aria-controls="site-drawer" data-i18n-aria="nav.menu">
+          <span class="menu-toggle-lines" aria-hidden="true"></span>
+          <span class="visually-hidden" data-i18n="nav.menu">Menu</span>
+        </button>
+      </div>
+    </div>
+
+    <div id="site-drawer" class="site-drawer" hidden>
+      <button type="button" class="site-drawer__backdrop" tabindex="-1" data-i18n-aria="nav.closeMenu" aria-label="Close menu"></button>
+      <div class="site-drawer__panel" tabindex="-1" role="dialog" aria-modal="true" aria-label="Menu">
+        <nav class="site-drawer__nav" aria-label="Mobile">
+          <a href="index.html" data-i18n="nav.home">Home</a>
+          <a href="faq.html" data-i18n="nav.faq">FAQ</a>
+          <a href="privacy.html" aria-current="page" data-i18n="nav.privacy">Privacy</a>
+          <a href="terms.html" data-i18n="nav.terms">Terms</a>
+        </nav>
+        <a class="header-cta header-cta--mobile" href="mailto:contact@nisu.info?subject=Nisu" data-i18n="nav.contact">Contact</a>
+      </div>
     </div>
   </header>
 
   <main id="main">
-    <a class="back-to-home" href="index.html">← Back to home</a>
+    <a class="back-to-home" href="index.html" data-i18n="privacy.back">← Back to home</a>
 
-    <article class="legal-doc">
+    <article class="legal-doc legal-lang" data-lang="en">
       <h1>Privacy Policy</h1>
       <p class="last-updated">Last updated: February 2025</p>
 
@@ -85,21 +109,80 @@
       <h2>9. Contact Us</h2>
       <p>For questions about this Privacy Policy or our data practices, contact us at: <strong><a class="link-inline" href="mailto:contact@nisu.info">contact@nisu.info</a></strong></p>
     </article>
+
+    <article class="legal-doc legal-lang" data-lang="sq" hidden>
+      <h1>Politika e privatësisë</h1>
+      <p class="last-updated">Përditësuar: shkurt 2025</p>
+
+      <p><strong>Nisu</strong> (&quot;ne&quot;, &quot;tona&quot; ose &quot;Nisu&quot;) operon aplikacionin(et) celular Nisu, përfshirë aplikacionin për udhëtarë dhe për vozitës (së bashku &quot;Aplikacioni&quot; ose &quot;Shërbimet&quot;). Kjo Politikë e privatësisë shpjegon se si mbledhim, përdorim, zbulojmë dhe mbrojmë informacionin tuaj kur përdorni Aplikacionin. Zona jonë kryesore e operimit është Kosova, dhe Shërbimet mund të jenë të disponueshme edhe në Shqipëri, Greqi, Maqedoninë e Veriut dhe vende të tjera.</p>
+
+      <h2>1. Informacioni që mbledhim</h2>
+      <p>Mbledhim informacion që na e jepni drejtpërdrejt dhe informacion të mbledhur automatikisht:</p>
+      <ul>
+        <li><strong>Të dhënat e llogarisë:</strong> Emër, email, telefon, foto profili dhe kredencialet e autentikimit kur krijoni llogari ose hyni (përfshirë përmes Google ose ofruesve të tjerë).</li>
+        <li><strong>Të dhëna të udhëtimit:</strong> Adresa e nisjes dhe destinacionit, vendet e ruajtura, historiku i udhëtimeve dhe informacioni i metodës së pagesës.</li>
+        <li><strong>Vendndodhja:</strong> Vendndodhje e saktë kur Aplikacioni është në përdorim (për përputhje, navigim dhe ndjekje të vozitësit). Ajo është thelbësore për funksionimin kryesor.</li>
+        <li><strong>Pajisja:</strong> Lloji i pajisjes, sistemi operativ, identifikuesit unikë dhe versioni i aplikacionit.</li>
+        <li><strong>Përdorimi:</strong> Si ndërveproni me Aplikacionin, përfshirë veçoritë e përdorura dhe modelet e udhëtimit.</li>
+      </ul>
+
+      <h2>2. Si i përdorim të dhënat</h2>
+      <p>I përdorim të dhënat për të:</p>
+      <ul>
+        <li>Ofruar, mbajtur dhe përmirësuar Aplikacionin dhe Shërbimet.</li>
+        <li>Lidhur udhëtarët me vozitësit dhe lehtësuar rezervimet.</li>
+        <li>Përpunuar pagesat dhe menaxhuar llogarinë tuaj.</li>
+        <li>Dërguar përditësime udhëtimi, faturime dhe komunikime të rëndësishme.</li>
+        <li>Përmirësuar sigurinë, parandaluar mashtrimet dhe zbatuar Kushtet e Shërbimit.</li>
+        <li>Përputhur me ligjet dhe u përgjigjur kërkesave të ligjshme.</li>
+      </ul>
+
+      <h2>3. Ndarja e informacionit</h2>
+      <p>Mund t&apos;i ndajmë të dhënat:</p>
+      <ul>
+        <li><strong>Me përdoruesit e tjerë:</strong> Udhëtarët dhe vozitësit shohin informacion të kufizuar të nevojshëm për të përfunduar udhëtimin (p.sh. emër, foto, nisje/destinacion, vendndodhje gjatë udhëtimit).</li>
+        <li><strong>Me ofrues shërbimi:</strong> Përpunues pagesash, harta, hosting në renë dhe analitikë që na ndihmojnë të operojmë Aplikacionin.</li>
+        <li><strong>Për qëllime ligjore:</strong> Kur kërkohet me ligj, vendim gjyqësor ose për të mbrojtur të drejtat, sigurinë ose pronën tonë.</li>
+      </ul>
+      <p>Ne nuk shesim informacionin tuaj personal të palëve të treta.</p>
+
+      <h2>4. Ruajtja e të dhënave</h2>
+      <p>I ruajmë të dhënat për sa kohë llogaria juaj është aktive ose sa nevojitet për Shërbimet. Mund të ruajmë disa të dhëna më gjatë për detyrime ligjore, zgjidhje mosmarrëveshjesh ose zbatim marrëveshjesh.</p>
+
+      <h2>5. Të drejtat tuaja</h2>
+      <p>Varësisht nga vendndodhja, mund të keni të drejtë aksesi, korrigjimi, fshirjes ose kufizimit të përpunimit të të dhënave personale. Në Kosovë dhe EEA mund të keni të drejta shtesë sipas ligjeve për mbrojtjen e të dhënave. Për t&apos;i ushtruar, na kontaktoni te emaili më poshtë.</p>
+
+      <h2>6. Siguria</h2>
+      <p>Zbatojmë masa teknike dhe organizative për mbrojtje. Megjithatë, asnjë metodë transmetimi ose ruajtjeje nuk është plotësisht e sigurt.</p>
+
+      <h2>7. Fëmijët</h2>
+      <p>Shërbimet nuk janë për përdorues nën 18 vjeç. Nuk mbledhim qëllimisht të dhëna nga fëmijët. Nëse besoni se kemi mbledhur të tilla, na kontaktoni.</p>
+
+      <h2>8. Ndryshime</h2>
+      <p>Mund ta përditësojmë këtë politikë. Do t&apos;ju njoftojmë për ndryshime të rëndësishme duke e postuar në Aplikacion ose me mjete të tjera të arsyeshme. Vazhdimi i përdorimit pas ndryshimeve nënkupton pranim.</p>
+
+      <h2>9. Kontakti</h2>
+      <p>Pyetje mbi këtë politikë ose praktikat e të dhënave: <strong><a class="link-inline" href="mailto:contact@nisu.info">contact@nisu.info</a></strong></p>
+    </article>
   </main>
 
   <footer class="site-footer">
     <div class="footer-links">
-      <a href="index.html">Home</a>
-      <a href="faq.html">FAQ</a>
-      <a href="terms.html">Terms of Service</a>
-      <a href="mailto:contact@nisu.info">Contact</a>
+      <a href="index.html" data-i18n="nav.home">Home</a>
+      <a href="faq.html" data-i18n="footer.faq">FAQ</a>
+      <a href="terms.html" data-i18n="footer.terms">Terms of Service</a>
+      <a href="mailto:contact@nisu.info" data-i18n="footer.contact">Contact</a>
     </div>
     © <span id="year"></span> Nisu
     <span class="meta">nisu.info</span>
   </footer>
 
-  <script>
+  <script src="i18n.js" defer></script>
+  <script defer>
     document.getElementById('year').textContent = new Date().getFullYear();
+    document.addEventListener('DOMContentLoaded', function () {
+      window.NisuI18n.bootstrap();
+    });
   </script>
 </body>
 </html>
