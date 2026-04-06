@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#030303" />
+  <meta name="color-scheme" content="dark" />
+  <title>FAQ — Nisu</title>
+  <meta name="description" content="Frequently asked questions about booking rides, driver signup, payments, and privacy on Nisu." />
+  <link rel="icon" href="assets/favicon.png" type="image/png" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body class="legal-page">
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <a href="index.html" class="brand" aria-label="Nisu home">
+      <img src="assets/nisu-logo-white.png" alt="" width="120" height="32" />
+      <span class="brand-text">Nisu</span>
+    </a>
+    <nav class="site-nav" aria-label="Site">
+      <a href="index.html">Home</a>
+      <a href="faq.html" aria-current="page">FAQ</a>
+      <a href="privacy.html">Privacy</a>
+      <a href="terms.html">Terms</a>
+    </nav>
+    <div class="header-actions">
+      <a class="header-cta" href="mailto:contact@nisu.info?subject=Nisu">Contact</a>
+    </div>
+  </header>
+
+  <main id="main">
+    <a class="back-to-home" href="index.html">← Back to home</a>
+
+    <article class="legal-doc">
+      <h1>Help &amp; frequently asked questions</h1>
+      <p class="last-updated">Last updated: February 2025</p>
+
+      <div class="faq-list" style="margin-top: 0;">
+        <details class="faq-item" open>
+          <summary>How do I book a ride?</summary>
+          <div class="faq-body">
+            <p>Enter your pickup and destination in the search fields, or pin locations on the map. Select your ride type and confirm. Available drivers will be shown; once a driver accepts, you can track their arrival and your ride in real time.</p>
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary>How do I pay for rides?</summary>
+          <div class="faq-body">
+            <p>Add a payment method in the ride confirmation flow. Nisu supports card payments. Payment is processed at the end of your ride.</p>
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary>Can I cancel a ride?</summary>
+          <div class="faq-body">
+            <p>Yes. You can cancel before the driver arrives. Cancellation fees may apply depending on timing. Check the ride screen for cancellation options.</p>
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary>How do I become a driver?</summary>
+          <div class="faq-body">
+            <p>Download the <strong>Nisu Driver</strong> app and complete registration. You will need to provide required documents and pass verification. Approval is subject to Nisu&apos;s driver requirements.</p>
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary>Is my location shared?</summary>
+          <div class="faq-body">
+            <p>Your location is used to match you with nearby drivers, show your position during a ride, and for navigation. We do not share your location with third parties except as necessary to provide the service (for example, with your driver during an active ride). See our <a class="link-inline" href="privacy.html">Privacy Policy</a> for details.</p>
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary>Where is Nisu available?</summary>
+          <div class="faq-body">
+            <p>Nisu is built for <strong>Kosovo</strong> and may be available in nearby regions as we expand. The app will show whether service is offered in your area when you open it.</p>
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary>What if something goes wrong during a trip?</summary>
+          <div class="faq-body">
+            <p>Your safety matters. Use in-app tools where available, and contact <a class="link-inline" href="mailto:contact@nisu.info">contact@nisu.info</a> with ride details. For emergencies, contact local emergency services first.</p>
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary>Does Nisu employ drivers or own cars?</summary>
+          <div class="faq-body">
+            <p>No. Nisu is a technology platform that connects riders and drivers. Drivers are independent users of the service, not employees of Nisu. See our <a class="link-inline" href="terms.html">Terms of Service</a> for the legal overview.</p>
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary>How do I contact support?</summary>
+          <div class="faq-body">
+            <p>Email us at <strong><a class="link-inline" href="mailto:contact@nisu.info">contact@nisu.info</a></strong> for help with your account, rides, payments, or any other questions.</p>
+          </div>
+        </details>
+      </div>
+    </article>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-links">
+      <a href="index.html">Home</a>
+      <a href="privacy.html">Privacy Policy</a>
+      <a href="terms.html">Terms of Service</a>
+      <a href="mailto:contact@nisu.info">Contact</a>
+    </div>
+    © <span id="year"></span> Nisu
+    <span class="meta">nisu.info</span>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
