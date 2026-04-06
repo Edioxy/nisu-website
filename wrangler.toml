@@ -1,0 +1,7 @@
+name = "nisu-website"
+main = "src/worker.js"
+compatibility_date = "2024-10-22"
+
+[assets]
+directory = "./public"
+binding = "ASSETS"

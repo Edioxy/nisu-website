@@ -1,6 +1,6 @@
 # nisu.info — marketing site
 
-A single static page: **black / white**, **mobile-first**, Apple-inspired typography and spacing. No build step — upload or connect Git to a static host.
+A single static page: **black / white**, **mobile-first**, Apple-inspired typography and spacing. Source files live in **`public/`** so the same repo works with **Cloudflare Workers Static Assets** (`npx wrangler deploy`) or any static host.
 
 ## What you need to do (checklist)
 
@@ -8,11 +8,24 @@ A single static page: **black / white**, **mobile-first**, Apple-inspired typogr
 
 | Host | Why |
 |------|-----|
-| **Cloudflare Pages** | Free SSL, fast CDN, works well with Namecheap DNS |
+| **Cloudflare Pages** | Free SSL, fast CDN, works well with Namecheap DNS — use **static** mode if the UI allows (build empty, output `public` or `.`). |
+| **Cloudflare Workers** | This repo includes `wrangler.toml` + a tiny worker so **`npx wrangler deploy`** is valid if Git integration forces that command. |
 | **Vercel** | Very simple Git deploy |
-| **Netlify** | Drag-and-drop `website/` folder |
+| **Netlify** | Drag-and-drop `public/` contents or repo with output `public` |
 
-Create a project whose **published files** are the contents of this `website` folder (so `index.html` is at the site root).
+Published HTML must be **`index.html` at the site root** (here that is `public/index.html` in the repo).
+
+#### Cloudflare “connect Git” when the deploy field cannot be empty
+
+If the wizard defaults to **`npx wrangler deploy`** and will not accept an empty deploy step, use this repo as-is:
+
+| Field | Value |
+|-------|--------|
+| Root directory | `.` (repo root) |
+| Build command | `npm install` |
+| Deploy command | `npx wrangler deploy` |
+
+First deploy: link the Cloudflare account in the dashboard or set `CLOUDFLARE_API_TOKEN` in Git integration secrets. The worker name in `wrangler.toml` is `nisu-website` — change `name` if you need a different Cloudflare project name.
 
 ### 2. Namecheap DNS → your host
 
@@ -37,7 +50,7 @@ Enable SSL/TLS on the host (usually automatic). In Namecheap, turn off any confl
 
 ### 4. App Store links (when ready)
 
-In **`index.html`**, near the bottom of the `<script>` block, set:
+In **`public/index.html`**, near the bottom of the `<script>` block, set:
 
 ```js
 var APP_STORE_RIDER = 'https://apps.apple.com/...';
@@ -54,19 +67,29 @@ Redeploy or re-upload the file. Until then, **App Store** buttons stay disabled 
 
 ## Local preview
 
-Open `index.html` in a browser, or run a quick server:
+**Quick static preview** (no install):
 
 ```bash
-cd website
+cd website/public
 python3 -m http.server 8080
 ```
 
 Visit `http://localhost:8080`
 
+**Same as Cloudflare** (optional):
+
+```bash
+cd website
+npm install
+npx wrangler dev
+```
+
 ---
 
 ## Files
 
-- **`index.html`** — Entire site (HTML, CSS, minimal JS).
+- **`public/index.html`** — Entire site (HTML, CSS, minimal JS).
+- **`src/worker.js`** — Pass-through to static assets for Workers deploy.
+- **`wrangler.toml`** — Worker + `[assets]` → `./public`.
 
-No dependencies. Safe to host anywhere static files are served.
+`npm install` only adds Wrangler for deploy/preview; the page itself has no runtime JS dependencies.

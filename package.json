@@ -1,0 +1,8 @@
+{
+  "name": "nisu-website",
+  "private": true,
+  "description": "nisu.info landing (Cloudflare Workers + static assets)",
+  "devDependencies": {
+    "wrangler": "^3.114.0"
+  }
+}
