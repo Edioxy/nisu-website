@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#ffffff" />
+  <meta name="color-scheme" content="only light" />
+  <script src="../js/force-light-canvas.js"></script>
+  <title>Nisu — Download for Android</title>
+  <meta name="description" content="Download Nisu directly for your Android phone while Google Play listing is in progress." />
+  <link rel="icon" href="../assets/favicon.png" type="image/png" />
+  <link rel="stylesheet" href="../styles.css" />
+</head>
+<body class="marketing-page download-flow-page">
+  <header class="topbar">
+    <div class="container topbar-inner">
+      <a href="/" class="brand" aria-label="Nisu">
+        <img class="brand-logo" src="../assets/nisu-logo.png?v=2" alt="Nisu" />
+      </a>
+      <nav class="nav-links" aria-label="Primary">
+        <a href="/ride" data-i18n="nav.ride">Ride</a>
+        <a href="/drive" data-i18n="nav.drive">Drive</a>
+        <a href="/business" data-i18n="nav.business">Business</a>
+        <a href="/about" data-i18n="nav.about">About</a>
+      </nav>
+      <div class="topbar-tools">
+        <div class="lang-switch" role="group" data-i18n-aria="lang.label" aria-label="Language">
+          <button type="button" class="lang-btn lang-btn--active" data-set-lang="en" aria-pressed="true">EN</button>
+          <button type="button" class="lang-btn" data-set-lang="sq" aria-pressed="false">SQ</button>
+        </div>
+        <button type="button" class="menu-toggle" aria-expanded="false" aria-controls="site-drawer" data-i18n-aria="nav.menu">
+          <img class="menu-toggle-icon" src="../assets/menu-icon.png" alt="" aria-hidden="true" />
+          <span class="visually-hidden" data-i18n="nav.menu">Menu</span>
+        </button>
+      </div>
+    </div>
+
+    <div id="site-drawer" class="site-drawer" hidden>
+      <button type="button" class="site-drawer__backdrop" tabindex="-1" data-i18n-aria="nav.closeMenu" aria-label="Close menu"></button>
+      <div class="site-drawer__panel" tabindex="-1" role="dialog" aria-modal="true" aria-label="Menu">
+        <nav class="site-drawer__nav" aria-label="Mobile">
+          <a href="/" data-i18n="nav.home">Home</a>
+          <a href="/ride" data-i18n="nav.ride">Ride</a>
+          <a href="/drive" data-i18n="nav.drive">Drive</a>
+          <a href="/business" data-i18n="nav.business">Business</a>
+          <a href="/about" data-i18n="nav.about">About</a>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <div class="container section download-flow-main download-flow-main--centered">
+      <p class="eyebrow download-flow-eyebrow" data-i18n="download.android.eyebrow">Android</p>
+
+      <h1 id="android-head-rider" class="download-flow-title" data-i18n="download.android.titleRider">Nisu for Android</h1>
+      <h1 id="android-head-driver" class="download-flow-title" hidden data-i18n="download.android.titleDriver">Nisu Driver for Android</h1>
+
+      <p id="android-lead-rider" class="download-flow-lead" data-i18n="download.android.leadRider">
+        Google Play is almost ready. Until then, install the rider app directly — verified package, same experience.
+      </p>
+      <p id="android-lead-driver" class="download-flow-lead" hidden data-i18n="download.android.leadDriver">
+        Driver builds install straight from Nisu while Play listing completes. Built for Samsung Galaxy and modern Android.
+      </p>
+
+      <div class="download-flow-card download-flow-card--cta download-flow-card--apk">
+        <div class="download-flow-android-mark" aria-hidden="true">
+          <img src="../assets/android-logo.png" alt="" width="88" height="88" />
+        </div>
+        <a id="apk-btn" class="btn btn-primary download-flow-apk-btn" href="#" download data-i18n="download.android.cta">Download APK</a>
+        <p class="download-flow-apk-note" data-i18n="download.android.apkNote">
+          Applies once APK files are uploaded to this site. If the button errors, try again shortly.
+        </p>
+      </div>
+
+      <section class="download-flow-help download-flow-help--centered" aria-labelledby="android-help-heading">
+        <h2 id="android-help-heading" class="download-flow-help-title" data-i18n="download.android.helpTitle">Install in three beats</h2>
+        <ul class="download-flow-help-list">
+          <li data-i18n="download.android.help1">Tap the downloaded file from notifications or your Downloads folder.</li>
+          <li data-i18n="download.android.help2">Approve “Install unknown apps” for your browser if prompted — normal for direct APKs.</li>
+          <li data-i18n="download.android.help3">Open Nisu from your home screen when install finishes.</li>
+        </ul>
+      </section>
+
+      <p class="download-flow-footnote download-flow-footnote--centered" data-i18n="download.android.iosNote">
+        iPhone uses the App Store — return home and tap the rider or driver chip.
+      </p>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-links footer-links--experience">
+      <a href="/ride" data-i18n="nav.ride">Ride</a>
+      <a href="/drive" data-i18n="nav.drive">Drive</a>
+      <a href="/business" data-i18n="nav.business">Business</a>
+      <a href="/about" data-i18n="nav.about">About</a>
+    </div>
+    <div class="footer-links footer-links--secondary">
+      <a href="/faq" data-i18n="footer.faq">FAQ</a>
+      <a href="/privacy" data-i18n="footer.privacy">Privacy Policy</a>
+      <a href="/terms" data-i18n="footer.terms">Terms of Service</a>
+      <a href="/contact" data-i18n="footer.contact">Contact</a>
+    </div>
+    © <span id="year"></span> Nisu
+    <span class="meta" data-i18n="footer.meta">nisu-app.com · Expanding thoughtfully</span>
+  </footer>
+
+  <script src="../js/download-config.js"></script>
+  <script src="../i18n.js" defer></script>
+  <script>
+    (function () {
+      var params = new URLSearchParams(window.location.search || '');
+      var app = params.get('app') === 'driver' ? 'driver' : 'rider';
+
+      document.addEventListener('DOMContentLoaded', function () {
+        document.getElementById('year').textContent = new Date().getFullYear();
+
+        var rider = app !== 'driver';
+        document.getElementById('android-head-rider').hidden = !rider;
+        document.getElementById('android-head-driver').hidden = rider;
+        document.getElementById('android-lead-rider').hidden = !rider;
+        document.getElementById('android-lead-driver').hidden = rider;
+
+        var D = window.NisuDownload || {};
+        var apk = app === 'driver' ? D.driverApkUrl : D.riderApkUrl;
+        document.getElementById('apk-btn').href = apk || '#';
+
+        window.NisuI18n.bootstrap();
+        document.title =
+          app === 'driver'
+            ? window.NisuI18n.t('download.android.pageTitleDriver')
+            : window.NisuI18n.t('download.android.pageTitleRider');
+      });
+    })();
+  </script>
+</body>
+</html>

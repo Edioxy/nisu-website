@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="color-scheme" content="only light" />
+  <script src="../js/force-light-canvas.js"></script>
+  <meta name="theme-color" content="#ffffff" />
+  <title>Nisu App</title>
+  <link rel="stylesheet" href="../styles.css" />
+</head>
+<body class="marketing-page download-gate-body">
+  <p id="app-smart-status" class="download-gate-status">Sending you to the right place…</p>
+  <script src="../i18n.js"></script>
+  <script src="../js/download-config.js"></script>
+  <script>
+    (function () {
+      var el = document.getElementById('app-smart-status');
+      if (el && window.NisuI18n && window.NisuI18n.t) {
+        el.textContent = window.NisuI18n.t('download.gate.status');
+      }
+      var D = window.NisuDownload || {};
+      var ua = navigator.userAgent || '';
+      var IOS = /iPhone|iPad|iPod/i.test(ua);
+      var ANDROID = /Android/i.test(ua);
+      var store = D.riderAppStoreUrl || 'https://apps.apple.com/app/nisu/id0000000000';
+
+      if (IOS) {
+        window.location.replace(store);
+        return;
+      }
+      if (ANDROID) {
+        window.location.replace('/download/android?app=rider');
+        return;
+      }
+      window.location.replace('/download/scan?app=rider');
+    })();
+  </script>
+  <noscript>
+    <div class="download-gate-noscript container">
+      <p><a href="/download/scan?app=rider">Desktop · QR</a></p>
+      <p><a href="/download/android?app=rider">Android · APK</a></p>
+    </div>
+  </noscript>
+</body>
+</html>

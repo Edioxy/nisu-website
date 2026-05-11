@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#ffffff" />
+  <meta name="color-scheme" content="only light" />
+  <script src="../js/force-light-canvas.js"></script>
+  <title>Nisu — Download</title>
+  <link rel="icon" href="../assets/favicon.png" type="image/png" />
+  <link rel="stylesheet" href="../styles.css" />
+</head>
+<body class="marketing-page download-gate-body">
+  <p id="download-gate-status" class="download-gate-status">Sending you to the right place…</p>
+  <script src="../i18n.js"></script>
+  <script src="../js/download-config.js"></script>
+  <script>
+    (function () {
+      var el = document.getElementById('download-gate-status');
+      if (el && window.NisuI18n && window.NisuI18n.t) {
+        el.textContent = window.NisuI18n.t('download.gate.status');
+      }
+    })();
+  </script>
+  <script src="../js/download-gate.js"></script>
+  <noscript>
+    <div class="download-gate-noscript container">
+      <p data-i18n="download.gate.noscript">Enable JavaScript for automatic routing, or choose a destination:</p>
+      <p><a href="/download/scan?app=rider" data-i18n="download.gate.noscriptRider">Desktop · QR for Rider</a></p>
+      <p><a href="/download/scan?app=driver" data-i18n="download.gate.noscriptDriver">Desktop · QR for Driver</a></p>
+      <p><a href="/download/android?app=rider" data-i18n="download.gate.noscriptAndroidRider">Android · Rider APK</a></p>
+      <p><a href="/download/android?app=driver" data-i18n="download.gate.noscriptAndroidDriver">Android · Driver APK</a></p>
+    </div>
+  </noscript>
+</body>
+</html>

@@ -3,44 +3,34 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-  <meta name="theme-color" content="#000000" />
-  <meta name="color-scheme" content="dark" />
-  <title>Nisu — Move through Kosovo</title>
-  <meta name="description" content="Nisu connects riders and drivers in Kosovo and the region. Clear pricing, live tracking, human support." />
-
-  <meta property="og:type" content="website" />
-  <meta property="og:title" content="Nisu — Move through Kosovo" />
-  <meta property="og:description" content="Book rides. Drive with Nisu. Built for Kosovo and the wider region." />
-  <meta property="og:url" content="https://nisu.info/" />
-  <meta property="og:image" content="https://nisu.info/assets/app-icon.jpg" />
-  <meta name="twitter:card" content="summary_large_image" />
-
-  <link rel="icon" href="assets/app-icon.jpg" type="image/jpeg" />
-  <link rel="apple-touch-icon" href="assets/app-icon.jpg" />
+  <meta name="nisu-api-base" content="https://nisu-backend.onrender.com" />
+  <meta name="theme-color" content="#ffffff" />
+  <meta name="color-scheme" content="only light" />
+  <script src="js/force-light-canvas.js"></script>
+  <title>Nisu — Book rides with clarity</title>
+  <meta name="description" content="Book rides with fast pickups and upfront fares — track your driver live, pay simply, and drive with a focused Driver app. Growing city by city." />
+  <link rel="icon" href="assets/favicon.png" type="image/png" />
   <link rel="stylesheet" href="styles.css" />
 </head>
-<body data-page-title="pageTitle">
-  <a class="skip-link" href="#main" data-i18n="skip">Skip to content</a>
-
-  <header class="site-header">
-    <div class="site-header__inner">
-      <a href="index.html" class="brand" aria-label="Nisu">
-        <span class="brand-wordmark">Nisu</span>
+<body class="marketing-page" data-page-title="home.new.pageTitle" data-description-key="home.new.metaDescription">
+  <header class="topbar">
+    <div class="container topbar-inner">
+      <a href="/" class="brand" aria-label="Nisu">
+        <img class="brand-logo" src="assets/nisu-logo.png?v=2" alt="Nisu" />
       </a>
-      <nav class="site-nav site-nav--desktop" aria-label="Primary">
-        <a href="index.html" aria-current="page" data-i18n="nav.home">Home</a>
-        <a href="faq.html" data-i18n="nav.faq">FAQ</a>
-        <a href="privacy.html" data-i18n="nav.privacy">Privacy</a>
-        <a href="terms.html" data-i18n="nav.terms">Terms</a>
+      <nav class="nav-links" aria-label="Primary">
+        <a href="/ride" data-i18n="nav.ride">Ride</a>
+        <a href="/drive" data-i18n="nav.drive">Drive</a>
+        <a href="/business" data-i18n="nav.business">Business</a>
+        <a href="/about" data-i18n="nav.about">About</a>
       </nav>
-      <div class="site-header__tools">
+      <div class="topbar-tools">
         <div class="lang-switch" role="group" data-i18n-aria="lang.label" aria-label="Language">
           <button type="button" class="lang-btn lang-btn--active" data-set-lang="en" aria-pressed="true">EN</button>
           <button type="button" class="lang-btn" data-set-lang="sq" aria-pressed="false">SQ</button>
         </div>
-        <a class="header-cta hide-mobile-up" href="mailto:contact@nisu.info?subject=Nisu" data-i18n="nav.contact">Contact</a>
         <button type="button" class="menu-toggle" aria-expanded="false" aria-controls="site-drawer" data-i18n-aria="nav.menu">
-          <span class="menu-toggle-lines" aria-hidden="true"></span>
+          <img class="menu-toggle-icon" src="assets/menu-icon.png" alt="" aria-hidden="true" />
           <span class="visually-hidden" data-i18n="nav.menu">Menu</span>
         </button>
       </div>
@@ -50,177 +40,236 @@
       <button type="button" class="site-drawer__backdrop" tabindex="-1" data-i18n-aria="nav.closeMenu" aria-label="Close menu"></button>
       <div class="site-drawer__panel" tabindex="-1" role="dialog" aria-modal="true" aria-label="Menu">
         <nav class="site-drawer__nav" aria-label="Mobile">
-          <a href="index.html" aria-current="page" data-i18n="nav.home">Home</a>
-          <a href="faq.html" data-i18n="nav.faq">FAQ</a>
-          <a href="privacy.html" data-i18n="nav.privacy">Privacy</a>
-          <a href="terms.html" data-i18n="nav.terms">Terms</a>
+          <a href="/" aria-current="page" data-i18n="nav.home">Home</a>
+          <a href="/ride" data-i18n="nav.ride">Ride</a>
+          <a href="/drive" data-i18n="nav.drive">Drive</a>
+          <a href="/business" data-i18n="nav.business">Business</a>
+          <a href="/about" data-i18n="nav.about">About</a>
         </nav>
-        <a class="header-cta header-cta--mobile" href="mailto:contact@nisu.info?subject=Nisu" data-i18n="nav.contact">Contact</a>
       </div>
     </div>
   </header>
 
-  <main id="main">
-    <section class="hero" aria-labelledby="hero-title">
-      <p class="hero-eyebrow" data-i18n="hero.eyebrow">Kosovo &amp; region</p>
-      <h1 id="hero-title" data-i18n="hero.title">Move with intention.</h1>
-      <p class="hero-lead" data-i18n="hero.lead">
-        Nisu pairs riders and drivers in a focused, modern experience — request when you need a ride, accept trips when you&apos;re behind the wheel. Built for real streets, upfront expectations, and support from humans when something needs fixing.
-      </p>
-
-      <div class="app-grid">
-        <article class="app-card">
-          <div class="app-card-icon">
-            <img src="assets/rider-icon.png" alt="" width="26" height="26" />
-          </div>
-          <p class="app-label" data-i18n="card.rider.label">For passengers</p>
-          <h3 data-i18n="card.rider.title">Rider</h3>
-          <p data-i18n="card.rider.body">
-            Set pickup and destination, watch your driver approach in real time, and pay the way that works for you. Fewer taps, clearer flow — from open app to on your way.
-          </p>
-          <ul>
-            <li data-i18n="card.rider.li1">Live trip tracking and driver ETA</li>
-            <li data-i18n="card.rider.li2">Saved places and fast re-booking</li>
-            <li data-i18n="card.rider.li3">Receipts and ride history in one place</li>
-          </ul>
-          <div class="actions">
-            <a class="btn btn--primary" id="play-rider" href="https://play.google.com/store/apps/details?id=com.edioxy.appNisu" rel="noopener noreferrer" target="_blank" data-i18n="btn.play">Google Play</a>
-            <a class="btn btn--ghost" id="ios-rider" href="#" aria-disabled="true" data-i18n="btn.store">App Store</a>
-          </div>
-          <p class="btn-note" id="note-rider"></p>
-        </article>
-
-        <article class="app-card">
-          <div class="app-card-icon">
-            <img src="assets/driver-view-icon.png" alt="" width="26" height="26" />
-          </div>
-          <p class="app-label" data-i18n="card.driver.label">For drivers</p>
-          <h3 data-i18n="card.driver.title">Driver</h3>
-          <p data-i18n="card.driver.body">
-            Separate app, same standard of clarity. See requests, navigate pickups, and keep your earnings organized — without the noise.
-          </p>
-          <ul>
-            <li data-i18n="card.driver.li1">Request feed built for quick decisions</li>
-            <li data-i18n="card.driver.li2">Navigation-friendly trip flow</li>
-            <li data-i18n="card.driver.li3">Independent partners — you choose when you drive</li>
-          </ul>
-          <div class="actions">
-            <a class="btn btn--primary" id="play-driver" href="https://play.google.com/store/apps/details?id=com.edioxy.appNisuDriver" rel="noopener noreferrer" target="_blank" data-i18n="btn.play">Google Play</a>
-            <a class="btn btn--ghost" id="ios-driver" href="#" aria-disabled="true" data-i18n="btn.store">App Store</a>
-          </div>
-          <p class="btn-note" id="note-driver"></p>
-        </article>
-      </div>
-    </section>
-
-    <section class="section" aria-labelledby="why-title">
-      <div class="section-head">
-        <span class="section-label" id="why-label" data-i18n="section.principles.label">Principles</span>
-        <h2 id="why-title" data-i18n="section.principles.title">How we think</h2>
-        <p data-i18n="section.principles.lead">Product choices that stay obvious in the hand — not buried in settings.</p>
-      </div>
-      <div class="feature-row">
-        <div class="feature-tile">
-          <strong data-i18n="principle.direct.title">Direct</strong>
-          <span data-i18n="principle.direct.body">Fewer steps from launch to on your way. Maps and actions first; clutter last.</span>
-        </div>
-        <div class="feature-tile">
-          <strong data-i18n="principle.fair.title">Fair</strong>
-          <span data-i18n="principle.fair.body">Pricing and expectations you can parse before you confirm — no surprises by design.</span>
-        </div>
-        <div class="feature-tile">
-          <strong data-i18n="principle.present.title">Present</strong>
-          <span data-i18n="principle.present.body">When something breaks, you reach a team — not an endless bot loop.</span>
-        </div>
-      </div>
-    </section>
-
-    <section class="section" aria-labelledby="steps-title">
-      <div class="section-head">
-        <span class="section-label" data-i18n="section.steps.label">Riders</span>
-        <h2 id="steps-title" data-i18n="section.steps.title">How a ride works</h2>
-        <p data-i18n="section.steps.lead">Three beats — the same ones you&apos;ll feel in the app.</p>
-      </div>
-      <div class="steps">
-        <div class="step">
-          <h3 data-i18n="step1.title">Pick where you&apos;re going</h3>
-          <p data-i18n="step1.body">
-            Search an address, choose a saved place, or drop a pin. Pickup and destination stay visible before you commit.
-          </p>
-        </div>
-        <div class="step">
-          <h3 data-i18n="step2.title">Confirm and match</h3>
-          <p data-i18n="step2.body">Choose your ride option and payment method. We connect you with an available driver nearby.</p>
-        </div>
-        <div class="step">
-          <h3 data-i18n="step3.title">Track and finish</h3>
-          <p data-i18n="step3.body">Watch the map as your driver arrives, ride with live updates, then wrap up with an in-app receipt.</p>
-        </div>
-      </div>
-    </section>
-
-    <section class="section" aria-labelledby="faq-preview-title">
-      <div class="section-head">
-        <span class="section-label" data-i18n="section.qa.label">Help</span>
-        <h2 id="faq-preview-title" data-i18n="section.qa.title">Quick answers</h2>
-        <p class="section-head__lead">
-          <span data-i18n="section.qa.leadBefore">More topics in our</span>
-          <a class="link-inline" href="faq.html" data-i18n="section.qa.leadLink">full FAQ</a>
-          <span data-i18n="section.qa.leadAfter">— or email us anytime.</span>
+  <main>
+    <section class="container hero">
+      <div class="hero-copy">
+        <p class="eyebrow" data-i18n="home.new.eyebrow">Ride-sharing</p>
+        <h1 data-i18n="home.new.title">Book a ride in minutes.</h1>
+        <p class="hero-lead" data-i18n="home.new.lead">
+          See your fare before you confirm, watch your driver arrive live, and finish the trip without friction — plus Nisu Driver for earning on your schedule.
         </p>
+        <div class="hero-downloads" role="group" data-i18n-aria="home.new.downloadGroupAria" aria-label="Nisu App and Driver App — download">
+          <a class="download-chip" href="/download?app=rider">
+            <span class="download-chip__icon-wrap" aria-hidden="true">
+              <img class="download-chip__icon" src="assets/nisu-rider-chip-icon.png" alt="" width="76" height="76" loading="eager" />
+            </span>
+            <span class="download-chip__copy">
+              <span class="download-chip__title" data-i18n="home.new.chipRiderTitle">Nisu&nbsp;App</span>
+              <span class="download-chip__sub" data-i18n="home.new.chipRiderSub">Download now</span>
+            </span>
+          </a>
+          <a class="download-chip" href="/download?app=driver">
+            <span class="download-chip__icon-wrap" aria-hidden="true">
+              <img class="download-chip__icon" src="assets/nisu-driver-app-icon.png" alt="" width="76" height="76" loading="eager" />
+            </span>
+            <span class="download-chip__copy">
+              <span class="download-chip__title" data-i18n="home.new.chipDriverTitle">Driver&nbsp;App</span>
+              <span class="download-chip__sub" data-i18n="home.new.chipDriverSub">Download now</span>
+            </span>
+          </a>
+        </div>
       </div>
+      <div class="hero-mockup">
+        <div class="hero-video-shell">
+          <video
+            id="hero-loop-video"
+            class="hero-video"
+            src="assets/onboarding-videos/nisu-phone-web-landing-1.mp4"
+            autoplay
+            muted
+            loop
+            playsinline
+            webkit-playsinline=""
+            preload="auto"
+            aria-label="Nisu app map preview video"
+          ></video>
+        </div>
+      </div>
+    </section>
+
+    <section class="home-why-band" aria-labelledby="why-nisu-heading">
+      <div class="container section section--why-dark">
+        <p class="eyebrow" data-i18n="home.new.whyEyebrow">Why Nisu</p>
+        <h2 id="why-nisu-heading" data-i18n="home.new.whyTitle">Every Driver in one app.</h2>
+        <div class="feature-grid">
+          <article class="feature-card">
+            <div class="feature-icon">
+              <img src="assets/location-pin-interface.png" alt="" class="feature-icon-img--why-tint" />
+            </div>
+            <h3 data-i18n="home.new.fastTitle">Fast Pickups</h3>
+            <p data-i18n="home.new.fastBody">Nearby matching and live arrival updates help you move without waiting.</p>
+          </article>
+          <article class="feature-card">
+            <div class="feature-icon">
+              <img src="assets/activity-icon.png" alt="" class="feature-icon-img--why-tint" />
+            </div>
+            <h3 data-i18n="home.new.priceTitle">Transparent Pricing</h3>
+            <p data-i18n="home.new.priceBody">Clear fares before confirmation. No hidden surprises at the end of a trip.</p>
+          </article>
+          <article class="feature-card">
+            <div class="feature-icon">
+              <img src="assets/safety-icon.png" alt="" class="feature-icon-img--why-tint" />
+            </div>
+            <h3 data-i18n="home.new.safetyTitle">Driver Safety</h3>
+            <p data-i18n="home.new.safetyBody">Built-in support and trip accountability for confident, consistent driving.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="container section app-capabilities">
+      <p class="eyebrow" data-i18n="home.new.capEyebrow">In the app</p>
+      <h2 data-i18n="home.new.capTitle">Built for real rides, not hype</h2>
+      <div class="cap-grid">
+        <article class="cap-card">
+          <h3 data-i18n="home.new.capRiderTitle">For riders</h3>
+          <ul class="cap-list">
+            <li data-i18n="home.new.capRider1">Live map tracking and clear pickup ETAs</li>
+            <li data-i18n="home.new.capRider2">Saved places for faster booking</li>
+            <li data-i18n="home.new.capRider3">Card or cash payment flow in-app</li>
+            <li data-i18n="home.new.capRider4">Ride history, receipts, and account controls</li>
+          </ul>
+        </article>
+        <article class="cap-card">
+          <h3 data-i18n="home.new.capDriverTitle">For drivers</h3>
+          <ul class="cap-list">
+            <li data-i18n="home.new.capDriver1">Quick request feed and navigation-friendly trip flow</li>
+            <li data-i18n="home.new.capDriver2">Passenger messaging and call access when needed</li>
+            <li data-i18n="home.new.capDriver3">Trip and profile management through Nisu Driver</li>
+            <li data-i18n="home.new.capDriver4">Tools tuned for real streets, traffic, and local conditions</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <section class="container section mini-faq">
+      <p class="eyebrow" data-i18n="home.new.faqEyebrow">Quick answers</p>
+      <h2 data-i18n="home.new.faqTitle">Frequently asked</h2>
       <div class="faq-list">
         <details class="faq-item">
-          <summary data-i18n="homeFaq.q1">How do I pay for rides?</summary>
+          <summary data-i18n="home.new.faqQ1">How fast can I get a ride?</summary>
           <div class="faq-body">
-            <p data-i18n="homeFaq.a1">Add a payment method when you confirm a trip. Nisu supports card payments; charges are processed when your ride ends.</p>
+            <p data-i18n="home.new.faqA1">Pickup times depend on your area and demand, but the app always shows nearby availability and ETA before you confirm.</p>
           </div>
         </details>
         <details class="faq-item">
-          <summary data-i18n="homeFaq.q2">Is my location shared?</summary>
+          <summary data-i18n="home.new.faqQ2">Can riders contact drivers safely?</summary>
           <div class="faq-body">
-            <p>
-              <span data-i18n="homeFaq.a2.part1">Location is used to match you with drivers, show progress during a trip, and power navigation. We don&apos;t sell your location. Details are in our</span>
-              <a class="link-inline" href="privacy.html" data-i18n="homeFaq.a2.link">Privacy Policy</a><span data-i18n="homeFaq.a2.part2"></span>
-            </p>
+            <p data-i18n="home.new.faqA2">Yes. Communication is handled through in-app tools, and reporting options are available to help keep the platform respectful and secure.</p>
           </div>
         </details>
         <details class="faq-item">
-          <summary data-i18n="homeFaq.q3">How do I get help?</summary>
+          <summary data-i18n="home.new.faqQ3">Do you support partnerships or sponsorships?</summary>
           <div class="faq-body">
-            <p>
-              <span data-i18n="homeFaq.a3.part1">Email</span>
-              <a class="link-inline" href="mailto:contact@nisu.info">contact@nisu.info</a>
-              <span data-i18n="homeFaq.a3.mid">for account, ride, or payment questions — we read every message.</span>
-            </p>
+            <p data-i18n="home.new.faqA3">Yes. We collaborate with businesses, venues, and local organizations. Reach out and our team will discuss options.</p>
           </div>
         </details>
       </div>
     </section>
 
-    <section class="contact" aria-label="Contact">
-      <p data-i18n="contact.support">Support</p>
-      <a href="mailto:contact@nisu.info?subject=Nisu">contact@nisu.info</a>
+    <section class="container section partners-band partners-band--cta" id="partner-contact">
+      <p class="eyebrow" data-i18n="home.new.partnerEyebrow">Partnerships</p>
+      <h2 data-i18n="home.new.partnerTitle">Partnerships & sponsorships</h2>
+      <p data-i18n="home.new.partnerBody">If you want to promote your brand, venue, or campaign through Nisu, we can build a focused local partnership.</p>
+      <a class="btn btn-primary" href="/contact?topic=partnership" data-i18n="home.new.partnerCta">Contact partnerships team</a>
+    </section>
+
+    <section class="container section section--download-footer">
+      <p class="eyebrow" data-i18n="home.new.footerDownloadEyebrow">Get the apps</p>
+      <h2 id="footer-download-heading" class="section-download-footer-title" data-i18n="home.new.footerDownloadTitle">
+        Download Nisu
+      </h2>
+      <p class="hero-lead section-download-footer-lead" data-i18n="home.new.footerDownloadLead">
+        Nisu App for booking rides. Nisu Driver for accepting trips and earning.
+      </p>
+      <div
+        class="hero-downloads hero-downloads--footer"
+        role="group"
+        data-i18n-aria="home.new.downloadGroupAria"
+        aria-labelledby="footer-download-heading"
+      >
+        <a class="download-chip" href="/download?app=rider">
+          <span class="download-chip__icon-wrap" aria-hidden="true">
+            <img class="download-chip__icon" src="assets/nisu-rider-chip-icon.png" alt="" width="76" height="76" loading="lazy" />
+          </span>
+          <span class="download-chip__copy">
+            <span class="download-chip__title" data-i18n="home.new.chipRiderTitle">Nisu&nbsp;App</span>
+            <span class="download-chip__sub" data-i18n="home.new.chipRiderSub">Download now</span>
+          </span>
+        </a>
+        <a class="download-chip" href="/download?app=driver">
+          <span class="download-chip__icon-wrap" aria-hidden="true">
+            <img class="download-chip__icon" src="assets/nisu-driver-app-icon.png" alt="" width="76" height="76" loading="lazy" />
+          </span>
+          <span class="download-chip__copy">
+            <span class="download-chip__title" data-i18n="home.new.chipDriverTitle">Driver&nbsp;App</span>
+            <span class="download-chip__sub" data-i18n="home.new.chipDriverSub">Download now</span>
+          </span>
+        </a>
+      </div>
     </section>
   </main>
 
   <footer class="site-footer">
-    <div class="footer-links">
-      <a href="faq.html" data-i18n="footer.faq">FAQ</a>
-      <a href="privacy.html" data-i18n="footer.privacy">Privacy Policy</a>
-      <a href="terms.html" data-i18n="footer.terms">Terms of Service</a>
-      <a href="mailto:contact@nisu.info" data-i18n="footer.contact">Contact</a>
+    <div class="footer-links footer-links--experience">
+      <a href="/ride" data-i18n="nav.ride">Ride</a>
+      <a href="/drive" data-i18n="nav.drive">Drive</a>
+      <a href="/business" data-i18n="nav.business">Business</a>
+      <a href="/about" data-i18n="nav.about">About</a>
+    </div>
+    <div class="footer-links footer-links--secondary">
+      <a href="/faq" data-i18n="footer.faq">FAQ</a>
+      <a href="/privacy" data-i18n="footer.privacy">Privacy Policy</a>
+      <a href="/terms" data-i18n="footer.terms">Terms of Service</a>
+      <a href="/contact" data-i18n="footer.contact">Contact</a>
     </div>
     © <span id="year"></span> Nisu
-    <span class="meta" data-i18n="footer.meta">nisu.info · Kosovo &amp; the wider region</span>
+    <span class="meta" data-i18n="footer.meta">nisu-app.com · Expanding thoughtfully</span>
   </footer>
 
   <script src="i18n.js" defer></script>
-  <script defer>
+  <script>
     document.getElementById('year').textContent = new Date().getFullYear();
     document.addEventListener('DOMContentLoaded', function () {
       window.NisuI18n.bootstrap();
-      window.NisuI18n.wireAppStoreButtons('', '');
+
+      var heroLoop = document.getElementById('hero-loop-video');
+      if (heroLoop && heroLoop.tagName === 'VIDEO') {
+        heroLoop.muted = true;
+        heroLoop.defaultMuted = true;
+        heroLoop.setAttribute('playsinline', '');
+        heroLoop.setAttribute('webkit-playsinline', '');
+        function tryHeroPlay() {
+          var p = heroLoop.play();
+          if (p && typeof p.catch === 'function') {
+            p.catch(function () {});
+          }
+        }
+        tryHeroPlay();
+        heroLoop.addEventListener('loadeddata', tryHeroPlay);
+        heroLoop.addEventListener('canplay', tryHeroPlay);
+        if (typeof IntersectionObserver !== 'undefined') {
+          var io = new IntersectionObserver(
+            function (entries) {
+              entries.forEach(function (entry) {
+                if (entry.isIntersecting) tryHeroPlay();
+              });
+            },
+            { threshold: 0.2 }
+          );
+          io.observe(heroLoop);
+        }
+      }
     });
   </script>
 </body>
